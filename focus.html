@@ -5,19 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum App</title>
-    <link rel="stylesheet" href="index.css">
-    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- external css -->
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./index.css">
+    
 </head>
-<body>
-    <div class="container">
-        <div class="logo">
-            <img src="/images/logo1.png" alt="">
-        </div>
-        <h2>What is your focus today?</h2>
-        <form action="main.html" method="get">
-            <input id="first-name" type="text" class="no-outline" required>
-        </form>
+<body onload="realtimeClock()">
+    <!-- Display time -->
+    <div class="main-container blackscreen2">
+            <div id="clock"></div>   
+            <div class="greetings2">
+                <h2>What is your focus today?</h2>
+                <form action="main.html" method="get" id="form">
+                    <input id="main-focus" type="text" class="no-outline" required>
+                </form>
+            </div> 
     </div>
+    
+    <script src="./script.js"></script>
 </body>
 </html>

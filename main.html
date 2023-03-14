@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum App</title>
+    <script src="https://kit.fontawesome.com/7489440202.js" crossorigin="anonymous"></script>
     <!-- external css -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body onload="realtimeClock()">
+    <img src="" alt="" id="imgbg">
+    <div class="blackscreen"></div>
     <!-- Weather -->
-
     <div class="container">
         <div class="notification">
             <div class="weather-container">
@@ -31,46 +33,75 @@
     <!-- Display time -->
     <div class="main-container">
         <div id="clock"></div>
-    <!-- Display Greetings -->
-    <div class="greetings">
-        <span id="greet"></span>
-        <span id="result-firstname"></span>
-        <span class="icon1"> <i id="pen" class="fas fa-pen"></i></span>
+        <!-- Display Greetings -->
+        <div class="greetings">
+            <span id="greet"></span>
+            <span id="result-firstname"></span>
+            <span class="icon1"> <i id="pen" class="fas fa-pen"></i></span>
 
-        <form method="get" id='form1'>
-            <input type="text" id="first-name" class="no-outline" required>
-            <span><i id="close1" class="fas fa-times-circle"></i></span>
+            <form method="get" id='form1' autocomplete="off">
+                <input type="text" id="first-name" class="no-outline" required>
+                <span><i id="close1" class="fas fa-times-circle"></i></span>
+            </form>
+        </div>
+        <!-- Display the main focus today -->
+        <div class="today">
+            <h2 id="focusToday"></h2>
+            <form id="form" method="get" autocomplete="off">
+                <input type="text" id="main-focus" class="no-outline required">
         </form>
+        <div class="content">
+                <h2 id="content"></h2>
+        </div>
+        </div>   
+            <!-- Display the quote -->
+        <div class="qoutes">
+            <div class="qoutes-container">
+                <h1 class="quote"></h1>
+                <p class="author"></p>
+            </div>
+        </div>     
     </div>
-    <!-- Display the main focus today -->
-    <div class="today">
-        
-    </div>        
 
-</div>
-    </div>
-</div>
+    <!-- Display todo -->   
+    <div class="wrapper" id= "wrapper">
+        <header>Todo List</header>
+        <span id="close"><i class="fas fa-times-circle"></i></span>
+        <form class="inputField" id="addtaskbtns" autocomplete="off">
+          <input type="text" placeholder="Add your new todo" id="todoitemsss" required>
+          <button type="submit"><i class="fas fa-plus"></i></button>
+        </form>
+        <ul class="todoList">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-</body>
+        </ul>
+        <div class="footer">
+          <span>You have <span class="pendingTasks"></span> pending tasks</span>
+          <button class="clearall">Clear All</button>
+        </div>
+      </div> 
+      <div class="todo">
+          <h2 id="todo"><span><i class="fas fa-list"></i></span> Todo</h2>
+      </div>
+        <script src="./script.js"></script>
+        <script src="./todo.js"></script>
+        <script src="./quotes.js"></script>
+        <script src="./storage.js"></script>
+        <script src="./weather.js"></script>
+    </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

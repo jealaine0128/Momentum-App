@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum App</title>
     <!-- external css -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./main.css">
+    
 
 </head>
-<body>
-    <div class="container">
-        <div class="logo">
-            <img src="/images/logo1.png" alt="">
+<body onload="realtimeClock()">
+    <!-- Display time -->
+    <div class="main-container blackscreen2">
+        <div id="clock"></div>    
+        <div class="greetings2">
+            <h2>Hello, What is your name?</h2>
+            <form action="focus.html" method="get" id="form1" autocomplete="off">
+                <input id="first-name" type="text" class="no-outline" required>
+            </form>
         </div>
-        <h2>Hello, What is your name?</h2>
-        <form action="focus.html" method="get">
-            <input id="first-name" type="text" class="no-outline" required>
-        </form>
     </div>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
